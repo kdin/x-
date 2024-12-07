@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "name": "X-",
+  "version": "1.0",
+  "description": "Extracts text from X (formerly Twitter) posts",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://x.com/*",
+    "https://twitter.com/*"
+  ],
+  "action": {
+    "default_title": "Extract Text"
+  },
+  "background": {
+    "service_worker": "src/background.js",
+    "type": "module"
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "src/utils/summarize.js"
+      ],
+      "matches": [
+        "https://x.com/*"
+      ]
+    }
+  ]
+}
