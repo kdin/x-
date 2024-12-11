@@ -27,6 +27,3 @@ The extension is organized into several modules:
 - `manifest.json`: Extension configuration
 - `src/content.js`: Main entry point
 - `src/utils/`: Utility functions for DOM manipulation and data extraction
-- `src/components/`: UI components
-- `src/observers/`: Timeline observation logic
-- `styles/hn-style.css`: HackerNews-inspired styling

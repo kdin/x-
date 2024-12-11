@@ -55,18 +55,12 @@ function generateHTML(tweets, isInitial = false) {
           font-weight: normal;
         }
 
-        .summarize-btn {
-          background: none;
-          border: none;
-          color: #000;
-          font-size: 13px;
-          cursor: pointer;
-          padding: 0 8px;
-        }
-
-        .summarize-btn:hover {
-          text-decoration: underline;
-        }
+        .matga {
+            font-family: Verdana, Geneva, sans-serif;
+            font-size: 10pt;
+            color: #222222;
+            line-height: 12px;
+        }          
 
         .modal-overlay {
           display: none;
@@ -170,11 +164,10 @@ function generateHTML(tweets, isInitial = false) {
       </style>
     </head>
     <body>
-      <button type="button" class="summarize-btn" id="summarizeBtnId">summarize</button>
       <div class="header">
         <div class="header-left">
           <span class="logo">X-</span>
-          <h1>${tweets.length} Tweets</h1>
+          <h1><b class="matga">Make Text Great Again</b> ${tweets.length} Tweets</h1>
         </div>
         
       </div>

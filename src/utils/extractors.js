@@ -79,7 +79,7 @@ async function extractAllTweets(targetCount = 50, quickExtract = false) {
       break;
     }
 
-    console.log(`Extracted ${extractedTweets.size}/${targetCount} tweets (attempt ${scrollAttempts + 1})`);
+    
 
     if (extractedTweets.size < targetCount) {
       const hasMoreContent = await scrollAndWaitForContent();
