@@ -13,8 +13,9 @@ function extractTweetInfo(tweetElement) {
     const linkElement = tweetElement.querySelector(SELECTORS.TWEET_LINK);
     const hasMedia = tweetElement.querySelector(SELECTORS.PHOTO) !== null || 
                     tweetElement.querySelector(SELECTORS.VIDEO) !== null;
+    const adSpan = Array.from(tweetElement.querySelectorAll('span')).find(span => span.textContent.trim() === 'Ad');
 
-    if (!textElement || !linkElement) return null;
+    if (!textElement || !linkElement || adSpan) return null;
 
     const link = linkElement.getAttribute('href');
     if (!link) return null;
